@@ -21,7 +21,7 @@ window.onload = function () {
       let row = document.createElement('tr');
       row.innerHTML = `
         <td>
-          <a href=${project.html_url}>${project.name}</a>
+          <a href=${project.homepage ? project.homepage : project.html_url}>${project.name}</a>
         </td>
         <td>${project.description}</td>
         <td>${project.stargazers_count}</td>
