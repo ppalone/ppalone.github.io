@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato&display=swap');
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  min-height: 100%;
+  font-family: 'Lato', sans-serif;
+}
+
+body {
+  min-height: 100%;
+  background-color: rgb(248, 248, 248);
+}
+
+a {
+  text-decoration: none;
+  color: rgb(0, 65, 93);
+}
+
+.container {
+  width: 60%;
+  margin: 0 auto;
+}
+
+.header__name h1 {
+  margin: 10px 0;
+}
+
+.header__links {
+  margin: 10px 0;
+}
+
+.header__links a {
+  padding-right: 8px;
+}
+
+.content > div {
+  margin: 20px 0;
+}
+
+.content > div > h2 {
+  margin: 8px 0;
+}
+
+.content > div > ul {
+  list-style-position: inside;
+}
+
+.projects__table {
+  width: 100%;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+  border: 1px solid black;
+  overflow-x: scroll;
+  text-align: center;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid black;
+}
+
+footer {
+  margin: 10px 0;
+}
+
+@media (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}
