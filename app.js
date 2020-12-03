@@ -17,7 +17,9 @@ window.onload = function () {
   }
 
   const setProjects = (projects) => {
-    projects.forEach(project => {
+    projects
+      .filter(project => !project.fork)
+      .forEach(project => {
       let row = document.createElement('tr');
       row.innerHTML = `
         <td>
