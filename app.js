@@ -5,10 +5,13 @@ window.onload = function () {
   const getProjects = async () => {
     try {
       let response = await fetch(
-        'https://api.github.com/users/ppalone/repos'
+        'https://api.github.com/users/ppalone/repos?per_page=100&type=sources'
       );
       if (response.status === 200) {
         projects = await response.json();
+        projects.sort((a,  b) => {
+          return Number(b["stargazers_count"]) - Number(a["stargazers_count"])
+        })
         setProjects(projects);
       }
     } catch (err) {
